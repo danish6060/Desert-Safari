@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your unforgettable Desert Safari Dubai experience – dune bashing, camel rides, BBQ dinner, and more!">
+  <title>Desert Safari Dubai | Book Your Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      background-color: #fffaf3;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://images.pexels.com/photos/20584984/pexels-photo-20584984.jpeg') 
+      no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      color: white;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fcbf49;
+    }
+
+    /* Hero Section */
+    .hero {
+        background-image: url("home.png");
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #fff4e6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      background-color: #fcbf49;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #f77f00;
+      color: #fff;
+    }
+
+    /* About Section */
+    section.about {
+      padding: 80px 5%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about img {
+      flex: 1;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #b85c00;
+    }
+
+    .about-content p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    /* Packages Section */
+    section.packages {
+      background-color: #fff4e6;
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .packages h2 {
+      font-size: 2.2rem;
+      color: #b85c00;
+      margin-bottom: 40px;
+    }
+
+    .package-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .package {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .package:hover {
+      transform: translateY(-10px);
+    }
+
+    .package img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .package-content {
+      padding: 20px;
+    }
+
+    .package-content h4 {
+      margin-bottom: 10px;
+      color: #b85c00;
+    }
+
+    .package-content p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    /* Booking Section */
+    section.booking {
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .booking h2 {
+      color: #b85c00;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    button {
+      background-color: #fcbf49;
+      color: #000;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #f77f00;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #fcbf49;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      section.about {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Hero -->
+  <header>
+    <nav>
+      <h1>UAE Trip</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Packages.html">Packages</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h2>Experience the Thrill of the Desert</h2>
+      <p>Dune bashing • Camel rides • BBQ Dinner • Live Shows</p>
+      <a href="#booking" class="btn">Book Your Safari</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <img src="camel safari.jpg" alt="Camel Ride in Dubai Desert">
+    <div class="about-content">
+      <h3>About Our Desert Safari</h3>
+      <p>
+        Embark on an unforgettable adventure across the golden dunes of Dubai. Our Desert Safari offers
+        an authentic taste of Arabian hospitality with thrilling dune bashing, camel rides, traditional entertainment, and a delicious BBQ dinner under the stars.
+      </p>
+      <p>
+        Whether you're a thrill-seeker or looking for a peaceful sunset escape, we have the perfect package for you.
+      </p>
+      <a href="#packages" class="btn">Explore Packages</a>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="packages">
+    <h2>Popular Safari Packages</h2>
+    <div class="package-list">
+      <div class="package">
+        <img src="evening.jpg" alt="Evening Desert Safari">
+        <div class="package-content">
+          <h4>Evening Desert Safari</h4>
+          <p>Enjoy the sunset, dune bashing, and a BBQ dinner with live performances.</p>
+          <p><strong>AED 150</strong> per person</p>
+        </div>
+      </div>
+
+      <div class="package">
+        <img src="morning safari.jpg" alt="Morning Desert Safari">
+        <div class="package-content">
+          <h4>Morning Desert Safari</h4>
+          <p>Perfect for thrill-seekers. Includes dune bashing, camel rides, and sandboarding.</p>
+          <p><strong>AED 120</strong> per person</p>
+        </div>
+      </div>
+
+      <div class="package">
+        <img src="private safari.jpg" alt="Private Desert Safari">
+        <div class="package-content">
+          <h4>Private Desert Safari</h4>
+          <p>Customized private experience with premium camp facilities and luxury transfer.</p>
+          <p><strong>AED 400</strong> per person</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="booking">
+    <h2>Book Your Desert Safari</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <select name="package" required>
+        <option value="">Select Package</option>
+        <option value="evening">Evening Desert Safari</option>
+        <option value="morning">Morning Desert Safari</option>
+        <option value="private">Private Desert Safari</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Additional Message"></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Desert Safari Dubai. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your Desert Safari Dubai adventure – confirm your spot for dune bashing, camel rides, BBQ dinner, and more!">
+  <title>Book Now | Desert Safari Dubai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      background-color: #fffaf3;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://images.pexels.com/photos/20584984/pexels-photo-20584984.jpeg') 
+      no-repeat center center/cover;
+      height: 50vh;
+      position: relative;
+      color: white;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fcbf49;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #fff4e6;
+    }
+
+    /* Booking Form Section */
+    section.booking {
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .booking h2 {
+      color: #b85c00;
+      margin-bottom: 15px;
+      font-size: 2.2rem;
+    }
+
+    .booking p {
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    form {
+      max-width: 650px;
+      margin: auto;
+      text-align: left;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    button {
+      background-color: #fcbf49;
+      color: #000;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: block;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      background-color: #f77f00;
+      color: #fff;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .contact-info h3 {
+      color: #b85c00;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.9rem;
+      margin-top: 80px;
+    }
+
+    footer a {
+      color: #fcbf49;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1>UAE Trip</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Packages.html">Packages</a></li>
+        <li><a href="Booking.html" style="color:#fcbf49;">Book Now</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h2>Book Your Desert Safari</h2>
+      <p>Secure your adventure today – quick and easy booking!</p>
+    </div>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="booking">
+    <h2>Reserve Your Adventure</h2>
+    <p>Fill out the form below and our team will confirm your booking shortly.</p>
+
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      
+      <select name="package" required>
+        <option value="">Select Package</option>
+        <option value="evening">Evening Desert Safari</option>
+        <option value="morning">Morning Desert Safari</option>
+        <option value="private">Private Desert Safari</option>
+      </select>
+
+      <input type="number" name="guests" placeholder="Number of Guests" required>
+
+      <input type="date" name="date" required>
+
+      <textarea name="message" rows="4" placeholder="Additional Requests or Questions"></textarea>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Need Help?</h3>
+      <p>📞 +971 55 123 4567</p>
+      <p>✉️ info@desertsafaridubai.com</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Desert Safari Dubai. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
