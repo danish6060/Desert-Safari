@@ -1,1 +1,11 @@
-# Desert-Safari
+🎨 Canvas & Code Art GalleryA dynamic E-commerce marketplace built with PHP and MySQL.Canvas & Code is a full-stack art gallery application. It uses PHP to handle server-side logic and MySQL to manage a robust database of artwork, artist details, and customer orders.🚀 Key FunctionalitiesDynamic Gallery: Artwork is pulled directly from the SQL database and rendered using PHP loops.Artist Dashboard: A secure area for artists to upload new pieces and manage their listings.Shopping Cart: A session-based cart system allowing users to collect art before checkout.Search & Filter: Find art by category, price range, or artist using SQL WHERE queries.Contact Forms: Functional PHP mailer for inquiries regarding specific masterpieces.🛠️ Technical BreakdownComponentTechnologyRoleFrontendHTML5 & CSS3Structure and custom aesthetic styling.BackendPHPProcessing forms, session management, and server logic.DatabaseMySQL (SQL)Storing art metadata, user credentials, and transaction history.ServerApache / XAMPPLocal development environment.📂 Project StructurePlaintext├── assets/             # Images, CSS files, and JS
+├── config/             # Database connection strings (db.php)
+├── includes/           # Reusable components (header.php, footer.php)
+├── uploads/            # Directory for uploaded artwork images
+├── admin/              # Admin/Artist management panels
+└── index.php           # Main landing page
+⚙️ Setup & Installation1. Database SetupOpen phpMyAdmin.Create a new database named art_gallery.Import the database.sql file provided in this repository to set up the tables.2. Configure ConnectionEdit config/db.php to match your local credentials:PHP$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "art_gallery";
+3. LaunchMove the project folder to your htdocs directory (if using XAMPP).Start Apache and MySQL in your control panel.Visit http://localhost/art-gallery-store in your browser.🔐 Security Features ImplementedPassword Hashing: Using password_hash() for secure user storage.Prepared Statements: Protection against SQL Injection attacks.Input Sanitization: Cleaning user data to prevent Cross-Site Scripting (XSS).🤝 ContributingFork the repo.Create a branch (git checkout -b feature/NewArtFilter).Commit changes (git commit -m 'Add price filter').Push to branch (git push origin feature/NewArtFilter).Open a Pull Request.
